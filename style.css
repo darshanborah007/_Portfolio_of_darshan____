@@ -1,0 +1,886 @@
+:root {
+  --purple: #616fcb;
+  --purple-light: #616fcb;
+  --purple-dark: #2d3463;
+  --purple-darker: #616fcb;
+  --white: #ffffff;
+  --black: #000000;
+  --bg: #232937;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: var(--bg);
+}
+
+.nav-bar {
+  z-index: 9999;
+  padding: 0 30px;
+  color: var(--white);
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--black);
+  position: fixed;
+  border-bottom: 2px solid var(--purple);
+  box-shadow: 0 2px 4px rgba(34, 121, 147, 0.5);
+}
+
+.nav-bar div {
+  display: flex;
+}
+
+.nav-bar a {
+  margin-left: 40px;
+  font-family: lato;
+  color: var(--white);
+  list-style: none;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+#new-nav {
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  background-color: var(--purple-darker);
+  justify-content: space-evenly;
+  width: 100%;
+  top: 0;
+  height: 300px;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+}
+
+#new-nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--purple-dark);
+}
+
+.nav-bar a:hover {
+  color: var(--purple-light) !important;
+}
+
+.nav-bar label {
+  color: var(--purple);
+  font-family: prompt;
+  font-size: 2rem;
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  padding-top: 60px;
+  padding-left: 100px;
+  overflow: hidden;
+  padding-right: 100px;
+  min-height: calc(100vh - 60px);
+  background-color: var(--bg);
+}
+
+/* home page styling */
+
+.my-info {
+  opacity: 0;
+  transform: translateX(0);
+  position: relative;
+  right: 50%;
+  margin-top: 50px;
+  margin-bottom: 120px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  transition: all 1s ease-in-out;
+}
+
+.my-info h1 {
+  font-family: bravo;
+  color: var(--white);
+  font-size: 5rem;
+}
+
+h1,
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.my-info h2 {
+  font-family: bravo2;
+  color: var(--purple);
+  font-size: 3rem;
+  text-shadow: 3px 1px #222324, 1px 2px #222324, 1px 3px #222324;
+}
+
+.my-info p {
+  color: var(--white);
+  text-align: justify;
+  font-family: lato;
+  font-size: 1rem;
+}
+
+.my-pic {
+  position: relative;
+  right: -50%;
+  transform: translateX(0);
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  transition: all 1s ease-in-out;
+}
+
+#my-pic-circle {
+  position: relative;
+  border-radius: 100%;
+  min-height: 420px;
+  min-width: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 5px solid var(--purple);
+  border-right: 5px solid var(--purple);
+  animation: rotate 25s infinite linear;
+}
+
+#my-pic-real {
+  position: absolute;
+  border-radius: 100%;
+  width: 410px;
+}
+
+.home-btns {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.hollow-btn {
+  font-family: lato;
+  border-radius: 10px;
+  background-color: transparent;
+  color: var(--white);
+  border: 3px solid var(--white);
+  margin: 0 30px;
+  height: 40px;
+  width: 150px;
+  transition: all 0.3s;
+}
+
+.hollow-btn:hover {
+  border: 3px solid var(--white);
+  background-color: var(--white);
+  cursor: pointer;
+  color: var(--black);
+}
+
+.hollow-btn:active,
+.solid-btn:active {
+  letter-spacing: 0.1em;
+}
+
+.solid-btn {
+  font-family: lato;
+  border-radius: 10px;
+  background-color: var(--purple-light);
+  color: var(--black);
+  border: 3px solid var(--purple-light);
+  margin: 0 30px;
+  height: 40px;
+  width: 150px;
+  transition: all 0.3s;
+}
+
+.solid-btn:hover {
+  border: 3px solid var(--purple-light);
+  background-color: transparent;
+  color: var(--purple-light);
+  cursor: pointer;
+}
+
+.contact-icon-holder {
+  position: absolute;
+  right: 1px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 420px;
+}
+
+.contact-icons {
+  margin: 10px;
+  right: 1px;
+  border: none;
+  background-color: transparent;
+  transition: 0.5s;
+}
+
+.contact-icons i {
+  font-size: 3rem;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.contact-icons i:hover {
+  color: var(--purple-light);
+  cursor: pointer;
+}
+
+.services > label,
+.skills > label,
+.about > div > label,
+.contact > div > label {
+  margin-top: 50px;
+  font-family: prompt;
+  font-size: 2rem;
+  color: var(--white);
+  align-self: center;
+}
+
+li:before {
+  content: "\2666";
+  margin-right: 5px;
+}
+
+li {
+  margin-top: 10px;
+  list-style: none;
+}
+
+/* services and skills page styling */
+
+.services,
+.skills {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.services > div,
+.skills > div {
+  opacity: 0;
+  position: relative;
+  left: -100%;
+  margin-top: 50px;
+  height: 400px;
+  align-items: center;
+  display: flex;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+  justify-content: center;
+}
+
+.services > label {
+  position: relative;
+  left: -100%;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.skills > label {
+  position: relative;
+  left: -100%;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+
+.services div div::-webkit-scrollbar,
+.skills div div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.services div div:hover,
+.skills div div:hover {
+  background-color: var(--purple-dark);
+}
+
+.services div div,
+.skills div div {
+  margin: 0 20px;
+  height: 370px;
+  border-radius: 50px;
+  width: 370px;
+  border-bottom: 2px solid var(--purple);
+  text-align: center;
+  color: var(--white);
+  font-family: lato;
+  font-size: 1rem;
+  padding: 5px 20px;
+  box-shadow: 0 2px 4px rgba(29, 102, 148, 0.5);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+#service-1 label,
+#service-2 label,
+#service-3 label,
+#skill-1 label,
+#skill-2 label,
+#skill-3 label {
+  text-shadow: 3px 1px #222324, 1px 2px #222324, 1px 3px #222324;
+  color: var(--purple);
+  font-size: 3rem;
+  font-family: bravo2;
+}
+
+#skill-1 > ul,
+#skill-2 > ul,
+#skill-3 > ul {
+  text-align: left;
+}
+
+/* about page styling */
+
+.about > div {
+  position: relative;
+  right: -50%;
+  height: 600px;
+  opacity: 0;
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+  align-items: center;
+  display: flex;
+  overflow: auto;
+  width: 100%;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.about div div {
+  display: flex;
+  width: 100%;
+  color: var(--white);
+  font-family: lato;
+  font-size: 1rem;
+}
+
+.about img {
+  opacity: 0.3;
+  height: 700px;
+  animation: blinkImage 20s infinite linear;
+}
+
+.about p {
+  margin-top: 30px;
+  text-align: justify;
+}
+
+.about div button {
+  width: 200px;
+}
+
+/* contact page styling */
+
+.contact > div {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  height: 550px;
+  align-items: center;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
+.contact div form {
+  height: 400px;
+  width: 50%;
+  margin-top: 30px;
+}
+
+.contact-field {
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  display: flex;
+}
+
+.contact-btn {
+  margin-top: 20px;
+  justify-content: center;
+  display: flex;
+}
+
+.contact-msg {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+}
+
+.contact-field > input {
+  width: 100%;
+  margin: 5px;
+  border: 1px solid transparent;
+  outline: none;
+  background-color: var(--purple-darker);
+  border-radius: 10px;
+  text-indent: 20px;
+  color: var(--black);
+  font-family: lato;
+  font-size: 1rem;
+}
+
+.contact-msg > textarea {
+  border: 1px solid transparent;
+  overflow-y: hidden;
+  color: var(--white);
+  font-family: lato;
+  font-size: 1rem;
+  margin-top: 5px;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  outline: none;
+  resize: none;
+  background-color: var(--purple-darker);
+}
+
+.contact-msg > textarea:hover,
+.contact-field > input:hover {
+  border-color: var(--white);
+}
+
+.contact-msg > textarea:focus,
+.contact-field > input:focus {
+  background-color: var(--purple-dark);
+}
+
+#three-bars {
+  color: var(--white);
+  border: none;
+  background-color: transparent;
+  display: none;
+}
+
+#three-bars:hover {
+  color: var(--purple-light);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blinkImage {
+  0% {
+    opacity: 0.1;
+  }
+
+  25% {
+    opacity: 0.2;
+  }
+
+  45% {
+    opacity: 0.3;
+  }
+
+  65% {
+    opacity: 0.2;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .services {
+    height: 1000px;
+  }
+
+  .services > div {
+    height: 600px;
+  }
+
+  #service-1,
+  #service-2,
+  #service-3 {
+    height: 600px;
+  }
+
+  #my-pic-circle {
+    min-width: 300px;
+    min-height: 300px;
+  }
+
+  #my-pic-real {
+    width: 300px;
+    height: 300px;
+  }
+
+  .contact-icons i {
+    font-size: 1.5rem;
+  }
+
+  .contact {
+    padding-bottom: 60px;
+  }
+
+  .about > img {
+    align-self: center;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .services {
+    height: 1100px;
+  }
+
+  .services > div {
+    height: 700px;
+  }
+
+  #service-1,
+  #service-2,
+  #service-3 {
+    height: 700px;
+  }
+}
+
+@media screen and (max-width: 1070px) {
+  .services {
+    height: 1000px;
+  }
+
+  .services > div {
+    height: 400px;
+  }
+
+  #service-1,
+  #service-2,
+  #service-3 {
+    height: 400px;
+  }
+
+  #my-pic-circle {
+    min-width: 300px;
+    min-height: 300px;
+  }
+
+  #my-pic-real {
+    width: 300px;
+    height: 300px;
+  }
+
+  .contact-icons i {
+    font-size: 1.5rem;
+  }
+
+  .my-info h1 {
+    font-size: 3rem;
+  }
+
+  .my-info h2 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .services > div,
+  .skills > div {
+    flex-wrap: wrap;
+    height: 800px;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .services {
+    height: 1450px;
+  }
+
+  .services > div {
+    height: 450px;
+  }
+
+  #service-1,
+  #service-2,
+  #service-3 {
+    margin: 10px;
+  }
+
+  #service-1,
+  #service-2,
+  #service-3 {
+    height: 400px;
+  }
+
+  .skills > div {
+    height: 1200px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #talk-btn {
+    width: 120px;
+    height: 40px;
+  }
+
+  #my-pic-circle {
+    min-width: 200px;
+    min-height: 200px;
+  }
+
+  #my-pic-real {
+    width: 200px;
+    height: 200px;
+  }
+
+  .contact-icons i {
+    font-size: 1rem;
+  }
+
+  .my-info h1 {
+    font-size: 2rem;
+  }
+
+  .solid-btn {
+    width: 120px;
+    height: 40px;
+  }
+
+  .hollow-btn {
+    width: 120px;
+    height: 40px;
+  }
+
+  .nav-bar {
+    height: 35px;
+  }
+
+  .nav-bar label {
+    font-size: 1.5rem;
+  }
+
+  #myForm {
+    height: 200px;
+    width: 100%;
+  }
+
+  .contact-block {
+    height: 500px;
+  }
+
+  .contact-field {
+    height: 90px;
+    flex-direction: column;
+  }
+
+  .contact-field input {
+    margin: 2px;
+    height: 40px;
+  }
+
+  .contact-msg {
+    height: 200px;
+  }
+
+  .contact {
+    padding-bottom: 20px;
+  }
+
+  .about {
+    padding-right: 0;
+    flex-direction: column;
+  }
+
+  .about > div {
+    width: 100%;
+  }
+
+  .about p {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  #three-bars {
+    display: block;
+  }
+
+  #old-nav {
+    display: none;
+  }
+
+  .contact button {
+    width: 350px;
+  }
+
+  .home-btns > button {
+    width: 350px;
+  }
+
+  #talk-btn {
+    width: 350px;
+  }
+
+  .my-info {
+    width: 100%;
+    order: 1;
+  }
+
+  .home {
+    flex-direction: column;
+    order: 2;
+  }
+
+  .my-pic {
+    width: 100%;
+  }
+
+  #service-1 > label,
+  #service-2 > label,
+  #service-3 > label {
+    font-size: 2rem;
+  }
+
+  #skill-1 > label,
+  #skill-2 > label,
+  #skill-3 > label {
+    font-size: 2rem;
+  }
+
+  .services > label,
+  .skills > label,
+  #myLabel,
+  .about > div > label {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .services {
+    height: 1800px;
+  }
+
+  .services > div {
+    height: 500px;
+  }
+
+  #service-1,
+  #service-2,
+  #service-3 {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .contact button {
+    width: 250px;
+  }
+
+  .home-btns > button {
+    width: 250px;
+  }
+
+  .about > div {
+    height: 800px;
+  }
+
+  #talk-btn {
+    width: 250px;
+  }
+
+  .services {
+    height: 2050px;
+  }
+
+  .services > div {
+    height: 600px;
+  }
+
+  #service-1,
+  #service-2,
+  #service-3 {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .home-btns {
+    align-self: center;
+    flex-direction: column;
+  }
+
+  .my-pic {
+    flex-direction: column;
+  }
+
+  .my-info {
+    text-align: center;
+  }
+
+  .home-btns button {
+    margin: 3px;
+  }
+
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .contact-icon-holder {
+    flex-direction: row;
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: -250px;
+  }
+}
+
+@font-face {
+  font-family: prompt;
+  src: url(Prompt-Bold.ttf);
+}
+
+@font-face {
+  font-family: lato;
+  src: url(Lato-Bold.ttf);
+}
+
+@font-face {
+  font-family: bravo;
+  src: url(BravoSC.otf);
+}
+
+@font-face {
+  font-family: bravo2;
+  src: url(BravoSCT.otf);
+}

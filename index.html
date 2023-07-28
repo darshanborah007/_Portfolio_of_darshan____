@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
+  <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+</head>
+
+<body>
+  <header>
+    <nav class="nav-bar">
+      <label>Portfolio</label>
+      <div id="old-nav">
+        <a href="#home" class="smooth-scroll" id="home-tab">Home</a>
+        <a href="#services" class="smooth-scroll" id="services-tab">Services</a>
+        <a href="#skills" class="smooth-scroll" id="skills-tab">Skills</a>
+        <a href="#about" class="smooth-scroll" id="about-tab">About</a>
+        <a href="#contact" class="smooth-scroll" id="contact-tab">Contact</a>
+        <a href="#theme" onclick="changeTheme()"><i class="fas fa-moon" class="theme-button"></i></a>
+      </div>
+      <button id="three-bars" onclick="showMenuBar()" onblur="hideMenuBar()">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div id="new-nav">
+        <a href="#home" class="smooth-scroll" id="home-tab">Home</a>
+        <a href="#services" class="smooth-scroll" id="services-tab">Services</a>
+        <a href="#skills" class="smooth-scroll" id="skills-tab">Skills</a>
+        <a href="#about" class="smooth-scroll" id="about-tab">About</a>
+        <a href="#contact" class="smooth-scroll" id="contact-tab">Contact</a>
+        <a href="#theme" onclick="changeTheme()"><i class="fas fa-moon" class="theme-button"></i></a>
+      </div>
+    </nav>
+  </header>
+
+  <section class="home parallax" id="home">
+    <div class="my-info">
+      <h1>Hey, I'm Darshan Borah</h1>
+      <h2>A <span class="auto-type"></span></h2>
+      <p>
+        Welcome to my portfolio, I am a passionate web-developer. With my
+        skills in HTML, CSS, JavaScript and some frameworks, i can bring a
+        website to life. I can create a website which is visually stunning and
+        responsive.
+      </p>
+      <div class="home-btns">
+        <button class="solid-btn">Contact Me</button>
+        <button class="hollow-btn">Download CV</button>
+      </div>
+    </div>
+    <div class="my-pic">
+      <div id="my-pic-circle"></div>
+      <img src="aspect.jpg" id="my-pic-real" />
+      <div class="contact-icon-holder">
+     <button class="contact-icons"><i class="fa fa-instagram"></i></button>
+       <button class="contact-icons"><i class="fa fa-twitter"></i></button>
+      <button class="contact-icons"><i class="fa fa-linkedin"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="services parallax" id="services">
+    <label>My Services</label>
+    <div>
+      <div id="service-1">
+        <label>Web Development</label>
+        <p>
+          I'm a web developer by passion. As a intermediate web-developer, i
+          am dedicated to providing top notch services.My services include
+          website design and development, website browser optimisation, making
+          them faster and creating custom features.
+        </p>
+        <button class="solid-btn" style="width: 150px; height: 30px">
+          Read more
+        </button>
+      </div>
+      <div id="service-2">
+        <label>Web App Development</label>
+        <p>
+          Full-cycle web-app development using React.js, Custom component
+          development, UI/UX design and prototyping and Performance
+          optimization for maximum speed and efficiency.
+        </p>
+        <button class="solid-btn" style="width: 150px; height: 30px">
+          Read more
+        </button>
+      </div>
+      <div id="service-3">
+        <label>Desktop Apps</label>
+        <p>
+          I can code in Python too. I have a average understanding of Python's
+          synta,OOS programming principles.I can create some beginner level
+          desktop apps.
+        </p>
+        <button class="solid-btn" style="width: 150px; height: 30px">
+          Read more
+        </button>
+      </div>
+    </div>
+    <div class="read-more-btns"></div>
+  </section>
+  <section class="skills parallax" id="skills">
+    <label>My Skills</label>
+    <div>
+      <div id="skill-1">
+        <label>Web Development</label>
+        <ul>
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>React Js</li>
+          <li>BootStrap</li>
+          <li>Responsive Web Design</li>
+          <li>Bulma</li>
+          <li>Tailwind CSS</li>
+          <li>Python</li>
+        </ul>
+      </div>
+      <div id="skill-2">
+        <label>Web-App Development</label>
+        <ul>
+
+          <li>React</li>
+          <li>HTML5</li>
+          <li>Python</li>
+          <li>JavaScript</li>
+         
+
+        </ul>
+      </div>
+      <div id="skill-3">
+        <label>Frameworks</label>
+        <ul>
+          <li>BootStrap</li>
+          <li>Tailwind</li>
+          <li>Bulma</li>
+          <li>materialize</li>
+          <li>React JS</li>
+          <li>Vue JS</li>
+
+      </div>
+    </div>
+  </section>
+  <section class="about parallax" id="about">
+    <img src="Picsart_23-07-28_13-36-17-522.png" />
+    <div>
+      <label>About Me</label>
+      <div>
+        <p>
+          Allow me to introduce myself. I am Darshan bora, a passionate and dedicaed individual from Assam, currently
+          pursuing my master in English Literature. Despite my background in English, i have developed a keen intrest in
+          programming and proficient in various languages and frameworks such as python, Css, Tailwind,React and
+          Bootstrap.I am constantly trying to enhancer my coding skills through youtube and other docs from internet.I
+          am always eager to learn and grow in the field of programming.My intrest in programming was build in 2021 when
+          there was lockdown in whole world due to Covid-19.
+        </p>
+      </div>
+      <button class="solid-btn" id="talk-btn">Let's Talk</button>
+    </div>
+  </section>
+
+  <section class="contact parallax" id="contact">
+    <div class="contact-block">
+      <label id="myLabel">Contact me</label>
+      <form id="myForm">
+        <div class="contact-field">
+          <input type="text" placeholder="Full Name" />
+          <input type="text" placeholder="Email Address" />
+        </div>
+        <div class="contact-field">
+          <input type="text" placeholder="Mobile Number" />
+          <input type="text" placeholder="Email Subject" />
+        </div>
+        <div class="contact-msg">
+          <textarea placeholder="Enter your message..."></textarea>
+        </div>
+        <div class="contact-btn">
+          <button class="solid-btn">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</body>
+
+</html>
